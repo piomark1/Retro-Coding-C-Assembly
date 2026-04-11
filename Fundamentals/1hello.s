@@ -28,7 +28,7 @@ asmMain:
 
 # Program start:         
                   pushq   %rbp            # Prepare space on stack for C library calls. 
-                  movq    %rsp, %rbp      # We need 128 bits of space if we don't wont "stack overflow" err.
+                  movq    %rsp, %rbp
                   addq  $16, %rsp
 
 # Program body:
