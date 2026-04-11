@@ -1,4 +1,4 @@
-# Compilation: gcc -fno-pie -no-pie c.cpp hello.s -z noexecstack
+# Compilation: gcc -fno-pie -no-pie c.cpp 1hello.s -z noexecstack
 .section .data
   
   Str:  .ascii  "*****************************************\n"
