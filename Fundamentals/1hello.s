@@ -9,10 +9,12 @@
 .section .text
 
 ProgramOutput:
+    pushq   %rbx
+    
     xorq    %rax, %rax    # Output procedure.
     call    printf
     xorq    %rax, %rax
-    pushq   %rbx
+    
     popq    %rbx
 
     ret
