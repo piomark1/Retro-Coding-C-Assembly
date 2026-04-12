@@ -29,7 +29,7 @@ asmMain:
 # Program start:         
                   pushq   %rbp            # Prepare space on stack for C library calls. 
                   movq    %rsp, %rbp
-                  addq  $16, %rsp
+                  subq  $16, %rsp
 
 # Program body:
                   lea Str(%rip), %rdi
