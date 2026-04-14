@@ -23,7 +23,7 @@
 	
 .section .bss
 .section .text
-
+#Requently used procedures:
 ProgramOutput:
 	pushq %rbx
   	xorq	%rax, %rax
