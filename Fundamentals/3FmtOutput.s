@@ -1,4 +1,7 @@
-    fmtStrI:
+#Compilation: gcc -fno-pie -no-pie c.cpp 3FmtOutput.s -z noexecstack
+
+#Constants section:
+	fmtStrI:
               .asciz  "i=%d, converted to hex=%#x\n"
 
     fmtStrJ:   
@@ -6,7 +9,7 @@
 
     fmtStrK:
               .asciz  "k=%d, converted to hex=%#x\n"
-
+#Writable/readable section:
 .section .data
 	
 	i:
@@ -20,11 +23,10 @@
 	
 .section .bss
 .section .text
-	
 
 ProgramOutput:
 	pushq %rbx
-  xorq	%rax, %rax
+  	xorq	%rax, %rax
 	call	printf
 	xorq	%rax, %rax
 	popq	%rbx
@@ -33,13 +35,14 @@ ProgramOutput:
 
 ProgramExit:
 	addq  $16, %rsp
-  popq  %rbp
+  	popq  %rbp
 
-  xorq  %rdi, %rdi
-  movq  $60, %rax
+  	xorq  %rdi, %rdi
+ 	movq  $60, %rax
+	
+	syscall
 
-  syscall
-
+#Start asmMain function:
 	.global	asmMain
 asmMain:
 
@@ -49,34 +52,28 @@ asmMain:
 	movq	%rsp, %rbp
 	subq  $16, %rsp
 	
-  
-  xorq  %rsi, %rsi
-  xorq  %rdx, %rdx
-  
-  lea	fmtStrI(%rip), %rdi
+	xorq  %rsi, %rsi
+  	xorq  %rdx, %rdx
+  	lea	fmtStrI(%rip), %rdi
 	movb	i, %sil
 	movb	%sil, %dl
 	call	ProgramOutput
 	
-  xorq  %rsi, %rsi
-  xorq  %rdx, %rdx
-
-  lea	fmtStrJ(%rip), %rdi
+  	xorq  %rsi, %rsi
+ 	xorq  %rdx, %rdx
+	lea	fmtStrJ(%rip), %rdi
 	movb	j, %sil
 	movb	%sil, %dl
 	call	ProgramOutput
 	
-
 	xorq  %rsi, %rsi
-  xorq  %rdx, %rdx
-
-  lea	fmtStrK(%rip), %rdi
+  	xorq  %rdx, %rdx
+	lea	fmtStrK(%rip), %rdi
 	movl	k, %esi
 	movl	%esi, %edx
 	call	ProgramOutput
-	
-ProgramEnd:
 
+#Program end:
 	call	ProgramExit
 
 
