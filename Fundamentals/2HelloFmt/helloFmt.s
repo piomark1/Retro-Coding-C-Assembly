@@ -5,7 +5,7 @@
 # but if You wish to put it into data section
 # program should work as well.
 #
-# Compilation: gcc -fno-pie -no-pie c.cpp 2helloFmt.s -z noexecstack
+# Compilation: gcc -fno-pie -no-pie c.cpp 2helloFmt.s -lstdc++ -z noexecstack
 	
   	fmtStr:     .asciz  "%s\n"
   
