@@ -1,4 +1,4 @@
-#Compilation: gcc -fno-pie -no-pie c.cpp 3FmtOutput.s -z noexecstack
+#Compilation: gcc -fno-pie -no-pie c.cpp 3FmtOutput.s -lstdc++ -z noexecstack
 
 #Constants section:
 	fmtStrI:
