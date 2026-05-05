@@ -25,7 +25,7 @@
 .section .text
 #Frequently used procedures:
 ProgramOutput:
-	pushq %rbx
+	pushq 	%rbx
   	xorq	%rax, %rax
 	call	printf
 	xorq	%rax, %rax
@@ -49,25 +49,25 @@ asmMain:
 #Program start:
 	pushq	%rbp
 	movq	%rsp, %rbp
-	subq  $16, %rsp
+	subq  	$16, %rsp
 	
-	xorq  %rsi, %rsi
-  	xorq  %rdx, %rdx
-  	lea	fmtStrI(%rip), %rdi
+	xorq  	%rsi, %rsi
+  	xorq  	%rdx, %rdx
+  	lea		fmtStrI(%rip), %rdi
 	movb	i, %sil
 	movb	%sil, %dl
 	call	ProgramOutput
 	
-  	xorq  %rsi, %rsi
- 	xorq  %rdx, %rdx
-	lea	fmtStrJ(%rip), %rdi
+  	xorq  	%rsi, %rsi
+ 	xorq  	%rdx, %rdx
+	lea		fmtStrJ(%rip), %rdi
 	movb	j, %sil
 	movb	%sil, %dl
 	call	ProgramOutput
 	
-	xorq  %rsi, %rsi
-  	xorq  %rdx, %rdx
-	lea	fmtStrK(%rip), %rdi
+	xorq  	%rsi, %rsi
+  	xorq  	%rdx, %rdx
+	lea		fmtStrK(%rip), %rdi
 	movl	k, %esi
 	movl	%esi, %edx
 	call	ProgramOutput
