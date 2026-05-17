@@ -30,4 +30,6 @@ asmMain:
     popq  %rbp
     
     xorq  %rdi, %rdi
+    xorq  %rax, %rax
+    movq  $60, %rax  
     syscall
