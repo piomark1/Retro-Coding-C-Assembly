@@ -3,6 +3,6 @@
 
 int main(void)
 {
-  printf("Kocham \t\tprogramowanie\n");
+  printf("I love \t\tprogramming\n");
   return 0;
 }
