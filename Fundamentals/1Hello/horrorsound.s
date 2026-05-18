@@ -1,7 +1,7 @@
 #Compilation:
 #           gcc -fno-pie -no-pie c.cpp horrorsound.s -lstdc++ -z noexecstack
 
-        Str:    .ascii  "What a horrible sound!!!\7\7\7\7\n"
+        Str:    .asciz  "What a horrible sound!!!\7\7\7\7\n" #Try replace '\7' with '\a'
 
 .section .data
 .section .bss
