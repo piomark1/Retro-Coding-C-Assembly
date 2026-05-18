@@ -27,7 +27,8 @@ asmMain:
 
     popq    %rbx
     popq    %rax
-
+    popq    %rbp
+        
     xorq    %rdi, %rdi
     xorq    %rax, %rax
     movq    $60, %rax
