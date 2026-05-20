@@ -15,7 +15,7 @@
     MyAge:            .int  0     #unsigned int is 4 bytes long
     range:            .quad 0     #unsigned long is 8 bytes long 
     temperature:      .int  0     #int is 4 bytes long
-    fertilise_price:  .float  0.0   #float is 4 bytes long 
+    fertilise_price:  .single  0.0   #float is 4 bytes long 
 
 .section .bss
 .section .text
@@ -34,6 +34,8 @@ asmMain:
     movq    %rsp, %rbp
     pushq   %rax
     pushq   %rbx
+
+    movl    $20, MyAge(%rip)
 
     lea       fmtStr(%rip), %rdi
     xorq      %rsi, %rsi
