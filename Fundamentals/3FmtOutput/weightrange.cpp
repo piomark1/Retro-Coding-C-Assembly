@@ -9,7 +9,7 @@ int main(void)
   printf("My weight is %d kg and all people", 
          weight
         );
-  printf(" in range %f meters can't stop"
+  printf(" in range %.1f meters can't stop"
          " looking at me.\n",
         range
         );
