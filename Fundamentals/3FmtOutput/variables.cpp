@@ -15,19 +15,21 @@ int main(void)
   temperature = -5;
   fertilise_price = 12.35;
 
+  //Text cut for two strings. One with integer values only, second with float values. 
   printf("My name is John, I am %u"
-          " years old, I walk to school %lu cm out away"
-          " of my home.\n"
-          "Girls from my school have body temperature %d Celsius degrees\n"
-          "so I spent on them only %f percent of my income\n"
+         " years old, I walk to school %lu cm out away"
+         " of my home.\n"
+         "Girls from my school have body temperature %d Celsius degrees\n",
+         MyAge, 
+         range,
+         temperature
+        );
+  printf("so I spent on them only %f percent of my income\n"
           "from my extra job what is fertilise trading\n"
-          "%f GBP/kg.\n", 
-          MyAge, 
-          range,
-          temperature,
+          "%f GBP/kg.\n",
           percent,
           fertilise_price
-          );
+         );
 
   return 0;
 
