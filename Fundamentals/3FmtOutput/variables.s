@@ -8,7 +8,7 @@
             
     floatStr:        .ascii  "so I spent on them only %f percent of my income\n"
                      .ascii  "from my extra job what is fertilise trading"
-                     .asciz  "%f GBP/kg.\n"
+                     .asciz  " %f GBP/kg.\n"
 
 .section .data
 
