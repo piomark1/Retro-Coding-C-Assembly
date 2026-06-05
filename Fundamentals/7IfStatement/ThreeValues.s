@@ -51,8 +51,9 @@ asmMain:
     movl    %eax, z(%rip)
 
 Equal100:
-    movl    z(%rip), %eax
-    cmpl    $100, %eax
+    #movl    z(%rip), %eax
+    #cmpl    $100, %eax
+    cmpl    $100, z(%rip)
     ja      Abowe100
     jb      Below100
     
