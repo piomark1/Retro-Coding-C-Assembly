@@ -13,12 +13,12 @@ int main(void)
     if (x != y)
     {
         z = x + y;
-        printf("\nAlready calculated a sum: %d\n", z);
+        printf("\nJust calculated the sum: %d\n", z);
     }
     else
     {
         z = x/y;
-        printf("\aAlready calculated a quotient: %d\n", z);
+        printf("\aJust calculated the quotient: %d\n", z);
     }
     return 0;
 }   
