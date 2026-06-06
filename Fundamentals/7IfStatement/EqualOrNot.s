@@ -80,8 +80,8 @@ ProgramExit:
     
     InFmtStr:   .asciz  "%d"
     
-    NotEquStr:  .asciz  "\nAlready calculated a sum: %d\n"
-    IsEquStr:   .asciz  "\nAlready calculated a quotient: %d\n"
+    NotEquStr:  .asciz  "\nJust calculated the sum: %d\n"
+    IsEquStr:   .asciz  "\nJust calculated the quotient: %d\n"
 .section .data
     x:  .int    0
     y:  .int    0
