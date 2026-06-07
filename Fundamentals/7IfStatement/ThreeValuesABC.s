@@ -89,7 +89,6 @@ B_lwr_C_OR_B_lwr_A:
         lea     bOutputStr(%rip), %rdi
         movl    d(%rip), %esi
         call    ProgramOutput
-        #jmp     ProgramExit
          
 #if((c > a && b != 5) || (b > c && a != 0))
 C_grtr_A_AND_B_NOT_5:
