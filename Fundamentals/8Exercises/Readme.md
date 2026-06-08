@@ -1,3 +1,5 @@
+Exercises:
+
 1. Write a program that prints the following text to the screen: /Some text/.
 
 2. Define a symbolic constant AGE with value 20 using two methods.
