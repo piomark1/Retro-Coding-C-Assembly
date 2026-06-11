@@ -39,6 +39,13 @@ asmMain:
     cvtss2sd    PI(%rip), %xmm1
     mulsd       %xmm1, %xmm0
 
+#   A = PI*R*R 
+#   movss       R(%rip), %xmm0
+#   movss       %xmm0, %xmm1
+#   mulss       %xmm1, %xmm0
+#   movss       PI(%rip), %xmm1
+#   mulss       %xmm1, %xmm0
+
     lea         OutStr(%rip), %rdi
     xorq        %rax, %rax
     incq        %rax
