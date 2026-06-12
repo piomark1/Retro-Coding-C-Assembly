@@ -44,7 +44,8 @@ asmMain:
 #   movss       %xmm0, %xmm1
 #   mulss       %xmm1, %xmm0
 #   movss       PI(%rip), %xmm1
-#   mulss       %xmm1, %xmm0
+#   mulss       %xmm0, %xmm1
+#   cvtss2sd    %xmm1, %xmm0
 
     lea         OutStr(%rip), %rdi
     xorq        %rax, %rax
