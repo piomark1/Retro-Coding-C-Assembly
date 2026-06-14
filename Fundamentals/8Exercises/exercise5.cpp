@@ -10,7 +10,7 @@ int main(void){
 
     if (age >= ARE_OF_AGE)
     {
-        printf("Yes, you are alreade of age. Come in!\n");
+        printf("Yes, you are already of age. Come in!\n");
     }
     else
     {
