@@ -14,23 +14,23 @@ int main(void)
 
     if(((a>=b) && (a>=c)) && ((a>=d) && (a>=e)))
     {
-        printf("Largest entered number is a: %d\n", a);
+        printf("The largest entered number is a: %d\n", a);
     }
     if(((b>=a)&&(b>=c))&&((b>=d)&&(b>=e)))
     {
-        printf("Largest entered number is b: %d\n", b);
+        printf("The largest entered number is b: %d\n", b);
     }
     if(((c>=a)&&(c>=b))&&((c>=d)&&(c>=d)))
     {
-        printf("Largest entered number is c: %d\n", c);
+        printf("The largest entered number is c: %d\n", c);
     }
     if(((d>=a)&&(d>=b))&&((d>=c)&&(d>=e)))
     {
-        printf("Largest entered number is d: %d\n", d); 
+        printf("The largest entered number is d: %d\n", d); 
     }
     if(((e>=a)&&(e>=b))&&((e>=c)&&(e>=d)))
     {
-        printf("Largest entered number is e: %d\n", e);
+        printf("The largest entered number is e: %d\n", e);
     }
     return 0;
 }
