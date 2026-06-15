@@ -5,7 +5,7 @@ int a, b, c, d, e;
 
 int main(void)
 {
-    printf("Enter five  numbers: ");
+    printf("Enter five  numbers:\n");
     scanf("%d", &a);
     scanf("%d", &b);
     scanf("%d", &c);
