@@ -34,5 +34,14 @@ ProgramExit:
     syscall
     
 .section const, "a"
+    NumInStr:   .asciz  "Enter five numbers:\n"
+    FmtInStr:   .asciz  "%d"  
+    
+    OutStrA:    .asciz  "The largest number is a: %d\n"
+    OutStrB:    .asciz  "The largest number is b: %d\n"
+    OutStrC:    .asciz  "The largest number is c: %d\n"
+    OutStrD:    .asciz  "The largest number is d: %d\n"
+    OutStrE:    .asciz  "The largest number is e: %d\n"
+
 .section .data
 .section .bss
