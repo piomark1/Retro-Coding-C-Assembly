@@ -44,4 +44,9 @@ ProgramExit:
     OutStrE:    .asciz  "The largest number is e: %d\n"
 
 .section .data
+    a:    .int    0
+    b:    .int    0
+    c:    .int    0
+    d:    .int    0
+    e:    .int    0
 .section .bss
