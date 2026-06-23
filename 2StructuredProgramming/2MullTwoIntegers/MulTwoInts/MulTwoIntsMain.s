@@ -1,3 +1,6 @@
+#Compilation:
+#        gcc -fno-pie -no-pie MulTwoIntsMain.s c.cpp -lstdc++ -z noexecstack
+        
         .include "ProgramInput.inc"
         .include "ProgramOutput.inc"
         .include "MulTwoInts.inc"
