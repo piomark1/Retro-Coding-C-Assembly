@@ -1,3 +1,6 @@
+#Compilation:
+#        gcc -fno-pie -no-pie RetNothingMain.s c.cpp -lstdc++ -z noexecstack
+    
     .include    "InputOutput.inc"
     .include    "RetNothing.inc"
 .section .text
