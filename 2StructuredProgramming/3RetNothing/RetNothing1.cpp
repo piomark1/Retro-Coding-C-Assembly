@@ -1,3 +1,6 @@
+/*Compilation:
+            gcc -fno-pie -no-pie RetNothing.s RetNothing1.cpp -lstdc++ -z noexecstack
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
