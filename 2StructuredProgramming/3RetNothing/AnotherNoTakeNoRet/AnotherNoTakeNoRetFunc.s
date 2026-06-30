@@ -1,5 +1,3 @@
-    .include "InputOutput.inc"
-
 .section .text
     
     .global NoTakeNoRet
@@ -10,10 +8,13 @@ NoTakeNoRet:
 
     movl    %eax, x(%rip)
 
-    lea     OutStr(%rip), %rdi
-    movl    x(%rip), %esi
-    xorq    %rax, %rax
-    call    ProgramOutput
+    lea      OutStr(%rip), %rdi
+    movl     x(%rip), %esi
+    pushq    %rbx
+    xorq     %rax, %rax
+    call     printf
+    xorq     %rax, %rax
+    popq     %rbx
     
     ret
 
