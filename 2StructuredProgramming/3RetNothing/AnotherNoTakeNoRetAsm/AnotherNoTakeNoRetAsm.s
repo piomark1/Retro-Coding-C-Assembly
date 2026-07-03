@@ -18,10 +18,10 @@ asmMain:
     movq    $60, %rax
 
     syscall
-
-.section const, "a"
-    OutStr: .ascii  "The sum of literal constants 10 and 40\n"
-            .asciz  "is %d, \n"
+#When we switch off this part we may put this code into RetNothing.inc
+#.section const, "a"
+#    OutStr: .ascii  "The sum of literal constants 10 and 40\n"
+#            .asciz  "is %d, \n"
 
 .section .data
     x:  .int    0
