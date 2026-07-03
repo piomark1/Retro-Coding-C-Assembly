@@ -9,3 +9,7 @@ RetNothing:
     call    ProgramOutput
 
     ret
+
+.section const, "a"
+    OutStr:    .ascii    "The sum of literal constants 10 and 40\n"
+               .asciz    "is %d\n"             
