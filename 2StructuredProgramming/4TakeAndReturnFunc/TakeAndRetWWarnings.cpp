@@ -28,7 +28,7 @@ int TakeAndRet(int x, int y, int z)
         __asm__(
                 "movl   %edi, %eax\n"
                 "leave\n"
-                "ret"
+                "ret\n"
                 );
         //return 1;
     }
@@ -37,7 +37,7 @@ int TakeAndRet(int x, int y, int z)
         __asm__(
                 "movl   %esi, %eax\n"
                 "leave\n"
-                "ret"
+                "ret\n"
                 );
         //return 1;
 
