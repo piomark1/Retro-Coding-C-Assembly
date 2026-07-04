@@ -30,6 +30,7 @@ int TakeAndRet(int x, int y, int z)
                 "leave\n"
                 "ret"
                 );
+        //return 1;
     }
     else
     {
@@ -38,6 +39,7 @@ int TakeAndRet(int x, int y, int z)
                 "leave\n"
                 "ret"
                 );
+        //return 1;
 
     }
 }
