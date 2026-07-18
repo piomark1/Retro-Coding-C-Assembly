@@ -9,7 +9,8 @@ int main(void)
     for(counter=0; counter<40; counter++)
     {
         array[counter] = 0;
+    }    
         printf("The array was set to zero.\n");
         return 0;
-    }
+    
 }
