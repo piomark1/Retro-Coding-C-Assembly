@@ -35,6 +35,7 @@ Print_Array_loop:
     call    ProgramOutput
     popq    %rbx
     popq    %rax
+    
     incq    %rax
     pushq   %rax
     incq    %rax
@@ -42,6 +43,7 @@ Print_Array_loop:
     popq    %rax
     cmpq    $0, %rdx
     jne     Print_Array_loop
+    
     lea     NewLine(%rip), %rdi
     movl    Array(, %rax, 4), %esi
     pushq   %rax
@@ -61,7 +63,7 @@ ProgramExit:
 
     syscall
 
-.section const, "a"
+.section .rodata
     ArrOut:     .asciz  "%d"
     NewLine:    .asciz "%d\n"
     OutStr:     .asciz "Array was set to zero every 5th step.\n"
