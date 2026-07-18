@@ -34,7 +34,7 @@ ProgramExit:
 
     syscall
 
-.section const, "a"
+.section .rodata
     OutStr: .asciz  "%d: I love Summer!\n"
 .section .data
     n:  .int    0
