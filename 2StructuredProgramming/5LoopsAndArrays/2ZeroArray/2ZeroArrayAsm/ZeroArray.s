@@ -71,7 +71,7 @@ ProgramExit:
 
     syscall
 
-.section const, "a"
+.section .rodata
     ArrOut:     .asciz  "%d"
     ArrOutNl:   .asciz  "%d\n"
     
