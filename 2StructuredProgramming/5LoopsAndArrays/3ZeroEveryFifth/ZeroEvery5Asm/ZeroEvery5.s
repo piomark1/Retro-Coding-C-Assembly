@@ -4,7 +4,7 @@
     .include    "InputOutput.inc"
 
 .section .text
-    .global asmMain
+    .global asmMain, 
 asmMain:
     pushq   %rbp
     movq    %rsp, %rbp
@@ -13,8 +13,8 @@ asmMain:
     xorq    %rcx, %rcx
 Array_loop:
     
-    addl    $5, %ecx
     movl    $0, Array(, %rcx, 4)
+    addl    $5, %ecx
     cmpq    $100, %rcx
     jb      Array_loop
         
