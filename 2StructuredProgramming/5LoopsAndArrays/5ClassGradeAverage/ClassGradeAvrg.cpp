@@ -14,6 +14,12 @@ int main(void)
     {
         printf("Enter the average grades of the student No %d: ", counter+1);
         scanf("%f", &students[counter]);
+
+        while((students[counter] < 1.0) || (students[counter] > 6.0))
+            {
+                printf("Enter proper value: );
+                scanf("%f", &students[counter]);
+            }
         sum_avrg += students[counter];
     }
   
