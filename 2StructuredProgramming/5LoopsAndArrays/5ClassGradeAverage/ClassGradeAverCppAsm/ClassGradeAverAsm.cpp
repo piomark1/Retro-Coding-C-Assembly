@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,15 +44,15 @@ int main(void)
 float WhatAverage(float x, int y)
 {
     //float z;
-    //
-    //z = x/y;
-
+    //z = x/y
     //return z;
+
         __asm__("AvrgFunc:\n"
                 "cvtsi2ss %rdi, %xmm1\n"
                 "divss  %xmm1, %xmm0\n"
                 "leave\n"
                 "ret\n"
                 );
+
     return AvrgFunc();
 }
