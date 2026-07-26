@@ -47,6 +47,7 @@ AvrgCountLoop:
             popq    %rcx
             lea     FmtIn(%rip), %rdi
             lea     students(, %rcx, 4), %rsi
+            pushq   %rcx
             call    ProgramInput
             popq    %rcx
             jmp     PropRangeLoop
