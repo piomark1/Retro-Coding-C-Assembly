@@ -6,7 +6,6 @@
     .include    "AvrgCountLoop.inc"
     .include    "PropRangeLoop.inc"
     .include    "WrongInput.inc"
-#    .include    "Continue.inc"
 
 .section .text
     .global asmMain
@@ -18,17 +17,16 @@ asmMain:
     xorq    %rcx, %rcx
     call    AvrgCountLoop
     
-    #call    Continue
-Continue:
-    popq    %rcx
-    movss   sum_avrg(%rip), %xmm0
-    movss   students(, %rcx, 4), %xmm1
-    addss   %xmm1, %xmm0
-    movss   %xmm0, sum_avrg(%rip)
+    Continue:
+        popq    %rcx
+        movss   sum_avrg(%rip), %xmm0
+        movss   students(, %rcx, 4), %xmm1
+        addss   %xmm1, %xmm0
+        movss   %xmm0, sum_avrg(%rip)
 
-    incq    %rcx
-    cmpq    $21, %rcx
-    jne     AvrgCountLoop
+        incq    %rcx
+        cmpq    $21, %rcx
+        jne     AvrgCountLoop
 
     cvtsi2ss    %rcx, %xmm0
     movss       sum_avrg(%rip), %xmm1
