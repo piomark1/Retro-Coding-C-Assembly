@@ -5,13 +5,25 @@ of any array.
 #include <stdlib.h>
 #include <stdio.h>
 
-int index, arry[10];
+int indx, arry[10];
 
 int main(void)
 {
-  for(index=0; index<10; ++index)
+  for(indx=0; indx<10; ++indx)
     {
-      array[index] = 1;
+      printf("%d", array[indx] = 0);
+      if(indx == 9)
+      {
+        printf("\n");
+      }
+    }
+  for(indx=0; indx<10; ++indx)
+    {
+      printf("%d", array[indx]=1);
+      if(indx == 9)
+      {
+        printf("\n");
+      }
     }
   return 0;
 }
